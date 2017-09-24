@@ -17,7 +17,29 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
+    <script>
+    var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            data: [5,3,7,8,4,2]
+        }]
+        labels: [
+            'Red',
+            'Blue',
+            'Yellow',
+            'Green',
+            'Purple',
+            'Orange'    
+        ]
+    }   ,
+    options: options
+    });  
+      
+      
+      
+    </script>
     <style>
       .bg-custom{
         background-color:#474e89;
@@ -39,6 +61,12 @@
             padding-left: 6em;
             padding-right: 8em;
         }
+        h3{
+            font-size:28px;
+        }
+        .bigger{
+            font-size:20px;
+        }
     </style>
   </head>
 
@@ -57,11 +85,6 @@
       </button>
       <a class="navbar-brand" href="#" style="font-size:2em;">FüdRush</a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-      <ul class="nav navbar-nav navbar-right">
-        <li class="navli"><a href="#" style="font-size:1.5em;">My Profile</a></li>
-      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -70,8 +93,7 @@
     <div class="container">
 
       <!-- Portfolio Item Heading --> 
-       <h1 class="my-4">Welcome
-        <small>to FüdRush</small>
+       <h1 class="my-4">Welcome to <big>FüdRush</big>
       </h1>
 
       <!-- Portfolio Item Row -->
@@ -82,11 +104,18 @@
         </div>
 
         <div class="col-md-4">
-          <h3 class="my-3">Our Mission</h3>
-          <p>The quickest way to get what you want to eat. Anytime, anywhere. Find something tailored just for you, or step out of your comfort zone to try something you'd never imagined would be your new favorite food. </p>
-          <h3 class="my-3">Completely Free</h3>
-          <p>Try Fudrush for free today, with no strings attached. We'll never charge you to use our base service.</p>
-          <a href="http://google.com" style="width:100%;"     type="button" class="btn btn-success btn-lg green"> <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png" style="width:1.5em;height:1.5em;"> </img>  Login with GitHub </a>
+            <h3 class="my-3">Our Mission</h3>
+          <p class="bigger">The quickest way to get what you want to eat. Anytime, anywhere. Find something tailored just for you, or step out of your comfort zone to try something you'd never imagined would be your new favorite food. </p>
+            <h3 class="my-3">Completely Free</h3>
+          <p class="bigger">Try Fudrush for free today, with no strings attached. We'll never charge you to use our base service.</p>
+          <form>
+          <div class="input-group">
+              <input type="text" class="form-control" placeholder="Enter Your Address!" style="font-size:1.65em; height:2em;"> 
+              <span class="input-group-btn">
+                  <button class="btn btn-lg green" type="button"> Submit </button>
+              </span>
+          </div>
+          </form>
         </div>
 
       </div>
