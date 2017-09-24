@@ -56,11 +56,13 @@ function Endpoints(app){
            .then(function (parsedBody) {
             var intents = JSON.parse(parsedBody);
             //  console.log();
-              var price = 1;
+              var price = '1';
               if(intents.entities[1].entity == 'cheap'){
                   price = '1,2';
               }else if(intents.entities[1].entity == 'expensive'){
                   price = '3,4,5';
+              }else{
+                  price = '1';
               }
 
                //Yelp it!
