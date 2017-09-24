@@ -3,8 +3,9 @@ var app = express();
 
 app.use(express.static('/public'));
 
+var port = process.env.port || 3000
 
-app.listen(3000);
+app.listen(port);
 app.engine('html', require('ejs').renderFile);
 
 app.set('views', './public' + '/views');
