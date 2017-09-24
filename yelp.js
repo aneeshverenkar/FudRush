@@ -32,10 +32,3 @@ exports.GetBusinessData = function (id) {
 	});
 	return JSON.parse(res.getBody('utf8'));
 }
-
-
-var res = exports.SearchForBusinesses("16551 Dora Hamann Pkwy, Omaha NE, 68116", "1, 2, 3", "italian");
-for (var i = 0; i < res.businesses.length; i++) {  
-	console.log(res.businesses[i].name);
-	console.log(res.businesses[i].rating);
-}
