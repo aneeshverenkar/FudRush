@@ -21,7 +21,7 @@ function Endpoints(app){
 
 
         
-             res.send(request.body.fRequest);
+             res.send(req.body.fRequest);
         });
 
 }
