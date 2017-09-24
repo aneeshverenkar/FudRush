@@ -26,7 +26,13 @@ exports.SearchForBusinesses = function (location, price_range, keywords, term) {
 			open_now: true
 		}
 	});
-	return JSON.parse(res.getBody('utf8'));
+
+	if(res.statusCode != 200){
+		return "error";
+	}else{
+		return JSON.parse(res.getBody('utf8'));
+	}
+	
 }
 
 exports.GetBusinessData = function (id) { 
