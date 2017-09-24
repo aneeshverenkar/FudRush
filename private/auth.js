@@ -4,8 +4,8 @@ const sync = require('sync-request');
 
 exports.auth_data = formurl_encode({
 			grant_type: 'client_credentials', 
-			client_id: 'X',
-			client_secret: 'X', 
+			client_id: 'enTwpl01W2O6OD8hGnf71A',
+			client_secret: 'EGOXQxildoE6FnC6c7cE2crZIZ7MIyqIpy6bYvTW4GHCdbBPZJ2VS9CcoNeAg882', 
 	});
 exports.auth_url = 'https://api.yelp.com/oauth2/token';
 

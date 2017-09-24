@@ -13,7 +13,9 @@
     "client-oauth2": "^4.1.0",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
+    "form-urlencoded": "^2.0.4",
     "request": "^2.82.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "sync-request": "^4.1.0"
   }
 }
