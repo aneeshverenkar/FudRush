@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.set('views', './public' + '/views');
 
 app.get('/', function(req, res) {
-    res.render('home.html');
+    res.render('home.html', {address: ''});
     });
 
 
