@@ -13,6 +13,10 @@ function Endpoints(app){
 
     });
 
+    app.get('/address', function(req,res){
+        database.UpdateLocation('500 S State St, Ann Arbor, MI 48109');
+    })
+
     app.get('/test', function(req,res){
 
         var fRequest = 'i want to review McDonalds';
@@ -28,6 +32,11 @@ function Endpoints(app){
 
              if(intents.topScoringIntent.intent == 'share_experience'){
                 console.log(intents.query);
+                //regex
+                //var rest = 
+
+                //store in db
+                
                 res.send('Okay. How would you rate your experience at '+rest+' ?');
              }else if(intents.topScoringIntent.intent = 'best_recommendation'){
              //  console.log();
@@ -41,7 +50,9 @@ function Endpoints(app){
                }
  
                 //Yelp it!
-           var restaurants = yelpAPI.SearchForBusinesses('500 S State St, Ann Arbor, MI 48109', price, intents.entities[0].entity);
+                var location = database.GetLocation("testingthis@mail.net");   
+                var restaurants = yelpAPI.SearchForBusinesses(location, price, intents.entities[0].entity);
+           //var restaurants = yelpAPI.SearchForBusinesses('500 S State St, Ann Arbor, MI 48109', price, intents.entities[0].entity);
             console.log(intents.entities[0].entity);
            
  
@@ -84,9 +95,7 @@ function Endpoints(app){
               }
 
                //Yelp it!
-		     
-		  var location = database.GetLocation("testingthis@mail.net");   
-          var restaurants = yelpAPI.SearchForBusinesses(location, price, intents.entities[0].entity);
+          var restaurants = yelpAPI.SearchForBusinesses('500 S State St, Ann Arbor, MI 48109', price, intents.entities[0].entity);
           // console.log(restaurants.businesses[0].name);
           
 
