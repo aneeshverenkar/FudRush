@@ -21,7 +21,7 @@ function Endpoints(app){
 
 
         
-             res.send("Yolo"+req.body);
+             res.send("Yolo"+req.body.fRequest);
         });
 
 }
