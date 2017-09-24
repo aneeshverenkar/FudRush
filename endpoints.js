@@ -48,6 +48,7 @@ function Endpoints(app){
            res.send(reply);
            })
            .catch(function (err) {
+			res.send("You asked me to look for " + intents.entitites[0].entity);
             res.send('Sorry, I did not find any near by.');
            });
 
