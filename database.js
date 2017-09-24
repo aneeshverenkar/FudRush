@@ -22,8 +22,6 @@ goose.model('Locations', Locations);
 goose.model('KeyWords', KeyWords);
 	
 	
-	
-	
 exports.CheckEmail = function (email, callback) { 
 	goose.model('Auth').findOne({'email' : email}, function (err, doc) {
 		if (err) { 
@@ -47,8 +45,14 @@ exports.GetLocation = function (email, callback) {
 	});
 };
 
-exports.GetLocation("testingthis@mail.net", function (doc) { 
-	if (doc) { 
-		console.log(doc.location);
-	};
-});
+exports.SetLocation = function (email, address) {
+	exports.GetLocation(email, function (doc) { 
+		if (doc) { 
+			doc.location = address;
+			doc.save();
+		};
+	});
+};
+	
+
+exports.SetLocation("testingthis@mail.net", "16551 Dora Hamann Pkwy, Omaha NE 68116");
