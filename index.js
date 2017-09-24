@@ -13,3 +13,8 @@ app.get('/', function(req, res) {
     res.render('home.html');
     });
 
+
+var endpoints = require('./endpoints')
+
+endpoints(app);
+    
