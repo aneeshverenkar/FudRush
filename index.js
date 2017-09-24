@@ -16,6 +16,8 @@ app.get('/', function(req, res) {
 
 
 var endpoints = require('./endpoints')
+var oauth = require('./oauth')
 
 endpoints(app);
+oauth(app);
     
