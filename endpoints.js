@@ -39,7 +39,7 @@ function Endpoints(app){
                //Yelp it!
 		     
 		  //var location = database.GetLocation("testingthis@mail.net");   
-		  var location = "16551 Dora Hamann Pkwy, Omaha NE 68116";
+		  var location = "500 S State St, Ann Arbor, MI 48109";
           var restaurants = yelpAPI.SearchForBusinesses(location, price, intents.entities[0].entity);
           // console.log(restaurants.businesses[0].name);
 		  
@@ -48,7 +48,6 @@ function Endpoints(app){
            res.send(reply);
            })
            .catch(function (err) {
-			res.send("You asked me to look for " + intents.entitites[0].entity);
             res.send('Sorry, I did not find any near by.');
            });
 

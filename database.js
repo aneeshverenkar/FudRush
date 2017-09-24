@@ -1,5 +1,5 @@
 const goose = require('mongoose');
-goose.connect('mongodb://localhost/USER_DATA', {useMongoClient: true});
+goose.connect('mongodb://mhacks:mhacks@ds040017.mlab.com:40017/fudrush', {useMongoClient: true});
 
 var Schema = goose.Schema;
 var ObjectId = Schema.ObjectId;
