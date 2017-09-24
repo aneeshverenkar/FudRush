@@ -12,90 +12,84 @@
     <title>FÜDRUSH</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/portfolio-item.css" rel="stylesheet">
-    <!-- Global CSS -->
-    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
     <style>
       .bg-custom{
         background-color:#474e89;
+        }
+        a{
+            color:white;
         }
        .foot-custom{
             height:2em;
         }
         .green{
-            background-color:#2e8ec9;
+            background-color:#54d32d;
             color:white;
+        } 
+        big{
+            font-size:2.625em;
         }
-        .left .right{
-            width:40%;
-            display: block;
+        .navbar-brand{
+            padding-left: 6em;
         }
-        .right{
-        align-self:right;
+        .navli{
+            padding-left: 6em;
+            padding-right: 8em;
         }
     </style>
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  </head>
 
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">FüdRush</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"> My Profile </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <nav class="navbar navbar-inverted bg-custom">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="font-size:2em;">FüdRush</a>
+    </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <ul class="nav navbar-nav navbar-right">
+        <li class="navli"><a href="#" style="font-size:1.5em;">My Profile</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+   <br> x
     <!-- Page Content -->
-    <div class="container" style="display:flex;">
-        <div class="col-md-6">
-                <h1 class="my-4"> Welcome,
+    <div class="container">
+        <div class="col-xs-12 col-md-6">
+                <h1 style="font-size:4.25em;"> Welcome,
                 <small> %user%.</small> </h1>
                 <div class="data">
-                    <label for="location"><b>Location:</b</label>
-                    <input type="text" class="form-control" id="location" value="The White House">
-                    <a class="button btn green"> Update </a>
+                    <label for="location"><big>Location:</big</label>
+                    <input style="font-size:0.9em;height:1.75em;" type="text" class="form-control" id="location" value="The White House">
+                    <a class="button btn green" style="font-size:0.75em;"> Update </a>
                 </div>
         </div>
-        <div class="col-md-6">
-                <h1 style="text-align:center;"> My Top Categories </h1>
+        <div class="col-xs-12 col-md-6">
+                <h1 style="text-align:center;font-size:1.75em;"> My Top Categories </h1>
                 <img style="width:100%;" src="http://www.conceptdraw.com/solution-park/resource/images/solutions/pie-charts/Graphs-and-Chatrs-Pie-Chart-Europe-Browser-Usage-Share.png">
         </div>
     </div>
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-custom foot-custom fixed-bottom">
-      <div class="container foot-custom">
-        <p class="m-0 text-center text-white">Copyright &copy; Fudrush 2017</p>
-      </div>
-      <!-- /.container -->
-    </footer>
 
   </body>
 </html>
