@@ -40,9 +40,9 @@ function Endpoints(app){
 		     
 		  //var location = database.GetLocation("testingthis@mail.net");   
 		  var location = "16551 Dora Hamann Pkwy, Omaha NE 68116";
-          var restaurants = yelpAPI.SearchForBusinesses(location, price, intents.entities[0].entity);
+          var restaurants = yelpAPI.SearchForBusinesses(location, price, intents.entities[0].entity, intents.entities[1].entity);
           // console.log(restaurants.businesses[0].name);
-
+		  
            var reply = 'There\'s ' +restaurants.businesses[0].name +' at '+restaurants.businesses[0].location.address1+'. It has a '+restaurants.businesses[0].rating+' star rating.';
            console.log(reply);
            res.send(reply);
