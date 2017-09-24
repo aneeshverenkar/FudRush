@@ -72,7 +72,7 @@ function Endpoints(app){
            res.send(reply);
            })
            .catch(function (err) {
-            res.send('Sorry, I did not find any '+intents.entities[1].entity+' '+ intents.entities[0].entity+' restaurant near by.');
+            res.send('Sorry, I did not find any near by.');
            });
 
              
