@@ -1,6 +1,7 @@
 module.exports = Endpoints;
 var rp = require('request-promise');
 var yelpAPI = require('./yelp.js');
+var database = require('./database.js');
 
 function Endpoints(app){
 
@@ -83,7 +84,9 @@ function Endpoints(app){
               }
 
                //Yelp it!
-          var restaurants = yelpAPI.SearchForBusinesses('500 S State St, Ann Arbor, MI 48109', price, intents.entities[0].entity);
+		     
+		  var location = database.GetLocation("testingthis@mail.net");   
+          var restaurants = yelpAPI.SearchForBusinesses(location, price, intents.entities[0].entity);
           // console.log(restaurants.businesses[0].name);
           
 

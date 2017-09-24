@@ -7,17 +7,22 @@ const businesses_search_url = 'https://api.yelp.com/v3/businesses/search';
 const businesses_id_url = 'https://api.yelp.com/v3/businesses/';
 
 
-exports.SearchForBusinesses = function (location, price_range, keywords) { 
+exports.SearchForBusinesses = function (location, price_range, keywords, term) { 
+	var sorting = 'best_match';
+	if (!term) { 
+		term = "restaurants";
+		sorting = 'rating';
+	};
 	var res = sync('GET', businesses_search_url, {
 		headers: { 
 			Authorization: auth.AuthHeader
 		},
 		qs: {
 			'location': location,
-			term: "restaurants",
+			'term': term,
 			categories: keywords,
 			'price': price_range,
-			sort_by: 'rating',
+			sort_by: sorting,
 			open_now: true
 		}
 	});
@@ -32,3 +37,4 @@ exports.GetBusinessData = function (id) {
 	});
 	return JSON.parse(res.getBody('utf8'));
 }
+
